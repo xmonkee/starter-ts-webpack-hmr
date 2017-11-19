@@ -1,0 +1,11 @@
+docker run \
+    --tty \
+    --interactive \
+    --expose 3000 \
+    --publish 3000:3000 \
+    --rm \
+    --workdir /app \
+    --volume "$(pwd)":/app \
+    -- \
+    node:8.8-slim \
+    yarn start

@@ -1,0 +1,8 @@
+docker run \
+    --tty \
+    --interactive \
+    --rm \
+    --workdir /app \
+    --volume "$(pwd)":/app \
+    node:8.8-slim \
+    "$@"
